@@ -1,0 +1,28 @@
+# Reading pref.tcl
+# //  ModelSim SE-64 10.3d Oct  6 2014 Linux 5.14.0-611.55.1.el9_7.x86_64
+# //
+# //  Copyright 1991-2014 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Loading project simu_full_adder
+# Compile of full_adder.vhd was successful.
+# Compile of full_adder.vhd was successful.
+# Compile of tb_full_adder.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui -t ps -novopt work.tb_full_adder
+# vsim -gui 
+# Start time: 17:29:24 on Nov 10,2026
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# Loading std.standard
+# Refreshing /net/netud/s/ppoulain004/Documents/1A_NUM/TDM1/simulation/work.tb_full_adder(tb)
+# ** Error: /net/netud/s/ppoulain004/Documents/1A_NUM/TDM1/vhdl/tb_full_adder.vhd(20): Delay in signal assignment must be ascending.
+# ** Error: /net/netud/s/ppoulain004/Documents/1A_NUM/TDM1/vhdl/tb_full_adder.vhd(21): VHDL Compiler exiting
+# ** Error: vcom failed.
+# ** Error: subinvocation of vcom failed; return status = 1.
+# ** Error: (vsim-3171) Could not find machine code for '/net/netud/s/ppoulain004/Documents/1A_NUM/TDM1/simulation/work.tb_full_adder(tb)'.
+# No such file or directory. (errno = ENOENT)
+# Error loading design

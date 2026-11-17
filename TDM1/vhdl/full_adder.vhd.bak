@@ -1,0 +1,8 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity full_adder is 
+  Port ( a,b,c : in STD_LOGIC;
+	sum, carry : out STD_LOGIC);
+end entity full_adder;
+

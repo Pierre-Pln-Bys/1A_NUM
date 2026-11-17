@@ -1,0 +1,29 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity adder_4b is
+  port(A,B : in STD_LOGIC_VECTOR(3 downto 0);
+         S : out STD_LOGIC_VECTOR(3 downto 0);
+       OVF : out STD_LOGIC);
+end entity adder_4b;
+
+architecture rtl of adder_4b is
+  component full_adder is
+    port(A,B,C : in STD_LOGIC;
+         SUM,CARRY : out STD_LOGIC);
+  end component full_adder;
+  
+  signal C1,C2,C3,C4 : STD_LOGIC;
+
+  begin
+    U0 : full_adder 
+    port map(A(0),B(0),'0',S(0),C1);
+    U1 : full_adder 
+    port map(A(1),B(1),C1,S(1),C2);
+    U2 : full_adder 
+    port map(A(2),B(2),C2,S(2),C3);
+    U3 : full_adder 
+    port map(A(3),B(3),C3,S(3),C4);
+    
+    OVF <= C4 xor C3;
+  end architecture rtl;
